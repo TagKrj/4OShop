@@ -2,10 +2,17 @@
 
 [English | Tiếng Việt (Hiện tại)](README.md)
 
-<div align="center">
-  <img src="assets/images/fashion-slideshow-06.jpg" alt="Xem trước Thương mại điện tử Thời trang 4O" width="100%" />
-</div>
 
+<div align="center">
+  <h3>Trang Chủ</h3>
+  <img src="https://raw.githubusercontent.com/TagKrj/4OShop/master/home4O.png" alt="4O Trang Chủ" width="80%" />
+  
+  <h3>Trang Danh Mục</h3>
+  <img src="https://raw.githubusercontent.com/TagKrj/4OShop/master/category.png" alt="4O Trang Danh Mục" width="80%" />
+  
+  <h3>Giỏ Hàng</h3>
+  <img src="https://raw.githubusercontent.com/TagKrj/4OShop/master/cart.png" alt="4O Giỏ Hàng" width="80%" />
+</div>
 
 ## Tổng Quan
 

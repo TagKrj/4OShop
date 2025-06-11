@@ -3,9 +3,15 @@
 [English (Current) | Tiếng Việt](README.vi.md)
 
 <div align="center">
-  <img src="assets/images/fashion-slideshow-06.jpg" alt="4O Fashion E-commerce Preview" width="100%" />
+  <h3>Homepage</h3>
+  <img src="https://raw.githubusercontent.com/TagKrj/4OShop/master/home4O.png" alt="4O Homepage" width="80%" />
+  
+  <h3>Category Page</h3>
+  <img src="https://raw.githubusercontent.com/TagKrj/4OShop/master/category.png" alt="4O Category Page" width="80%" />
+  
+  <h3>Shopping Cart</h3>
+  <img src="https://raw.githubusercontent.com/TagKrj/4OShop/master/cart.png" alt="4O Shopping Cart" width="80%" />
 </div>
-
 
 ## Overview
 
