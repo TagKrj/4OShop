@@ -1,0 +1,149 @@
+#nav {
+    height: 55px;
+    width: 100%;
+    /* background-color: red; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 30px;
+    position: fixed;
+    z-index: 102;
+}
+
+#nav a {
+    text-decoration: none;
+    color: #0f0f0f;
+}
+
+#nav h1 i {
+    font-size: 20px;
+}
+
+#nav h1 span {
+    font-size: 30px;
+    font-weight: 500;
+}
+
+#nav-part2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+#nav #user-notification {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+#nav #user-notification i {
+    font-size: 20px;
+    color: #1a1a1a;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+#nav #user-notification i:hover {
+    color: #EDBFFF;
+}
+
+#nav h4 {
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+#nav h4:hover {
+    border-bottom: 1px solid #1a1a1a;
+    transition: all 0.3s;
+}
+
+#nav h4:nth-child(1) {
+    border-bottom: 1.5px solid #1a1a1a;
+}
+
+#nav h4 span {
+    background-color: #d60606e3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    margin-top: -30px;
+    margin-left: 70px;
+    position: absolute;
+}
+
+#notification {
+    background-color: #d60606e3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    margin-top: -35px;
+    margin-left: 12px;
+    position: absolute;
+}
+
+.notification {
+    background-color: #eeb5ff59;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+    width: 20vw;
+    height: 20vw;
+    margin-top: 21vw;
+    margin-left: -25vw;
+    position: absolute;
+    padding: 10px;
+    overflow: hidden;
+    overflow-y: auto;
+    z-index: 5;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.2s;
+}
+
+.notification::-webkit-scrollbar {
+    width: 6px;
+}
+
+.notification::-webkit-scrollbar-thumb {
+    background-color: #e6e6e685;
+    border-radius: 5px;
+}
+
+.notification .item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #ffffff85;
+    width: 100%;
+    border-radius: 5px;
+    z-index: 5;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.notification .item p {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.notification .item:hover {
+    transform: scale(1.05);
+}

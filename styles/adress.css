@@ -1,0 +1,195 @@
+/*ĐỊA CHỈ  */
+
+.main .mainBody .containerRight .contentAddress {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 5vw;
+}
+
+.main .mainBody .containerRight .contentAddress .add {
+    display: flex;
+    justify-content: end;
+}
+
+.main .mainBody .containerRight .contentAddress .addAddress {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1vw;
+    position: absolute;
+    top: 6vw;
+    right: 6vw;
+    width: 25vw;
+    height: 23vw;
+    padding: .5vw;
+    border-radius: 2px;
+    border: .5px solid #ffffff49;
+    transform: translateX(500px);
+    transition: all linear .2s;
+    opacity: 0;
+}
+
+.main .mainBody .containerRight .contentAddress .addAddress h2 {
+    font-weight: 300;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+}
+
+.main .mainBody .containerRight .contentAddress .addAddress .addAddressForm {
+    display: flex;
+    flex-direction: column;
+    gap: .5vw;
+    background-color: #323232;
+    padding: 1vw;
+    width: 100%;
+}
+
+.main .mainBody .containerRight .contentAddress .addAddress .addAddressForm label {
+    color: #dadada;
+}
+
+.main .mainBody .containerRight .contentAddress .addAddress .addAddressForm input {
+    padding: .5vw;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    background-color: #000000ec;
+}
+
+.main .mainBody .containerRight .contentAddress .addAddress .addAddressForm input::placeholder {
+    color: #7a7a7a;
+}
+
+.main .mainBody .containerRight .contentAddress .addAddress .addAddressForm .type {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 1vw;
+    margin-top: 10px;
+    width: 100%;
+}
+
+.main .mainBody .containerRight .contentAddress .addAddress .addAddressForm .type h3 {
+    border: 1px solid #7a7a7a;
+    padding: .2vw .5vw;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all linear .1s;
+    font-weight: 500;
+    font-size: 1vw;
+}
+
+.main .mainBody .containerRight .contentAddress .addAddress .addAddressForm .type h3:hover {
+    transform: scale(1.05);
+    border: 1px solid #EDBFFF;
+    color: #EDBFFF;
+}
+
+.main .mainBody .containerRight .contentAddress .addAddress .addAddressForm button {
+    width: 50%;
+    margin-top: 10px;
+    padding: .5vw;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background-color: #EDBFFF;
+    color: #000;
+    text-transform: uppercase;
+    margin-left: 25%;
+    transition: all linear .1s;
+}
+
+.main .mainBody .containerRight .contentAddress .addAddress .addAddressForm button:hover {
+    transform: scale(1.05);
+}
+
+.main .mainBody .containerRight .contentAddress .add i {
+    font-size: 2.5vw;
+    cursor: pointer;
+    transition: all linear .1s;
+}
+
+.main .mainBody .containerRight .contentAddress .add i:hover {
+    transform: scale(1.2) rotate(90deg);
+}
+
+.main .mainBody .containerRight .contentAddress .contentDetail {
+    display: flex;
+    flex-direction: column;
+    gap: 2vw;
+    padding-left: 4vw;
+}
+
+.main .mainBody .containerRight .contentAddress .contentDetail .item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1vw;
+    width: 36vw;
+    border-radius: 5px;
+    padding: 1vw;
+    cursor: pointer;
+    transition: all linear .1s;
+    border: .5px solid #ffffffa3;
+}
+
+.main .mainBody .containerRight .contentAddress .contentDetail .item:hover {
+    color: #000;
+    box-shadow: 1px 4px 5px #323232;
+    border: 1px solid #EDBFFF;
+    transform: scale(1.02) translateX(10px);
+}
+
+.main .mainBody .containerRight .contentAddress .contentDetail .item i {
+    font-size: 2.5vw;
+    margin-right: 1vw;
+    width: 5.1vw;
+    height: 5vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: #3d3d3d;
+}
+
+.main .mainBody .containerRight .contentAddress .contentDetail .item .info {
+    display: flex;
+    flex-direction: column;
+    gap: .5vw;
+    text-align: left;
+    width: 60%;
+}
+
+.main .mainBody .containerRight .contentAddress .contentDetail .item .info h3 {
+    font-weight: 100;
+    font-size: 1.1vw;
+}
+
+.main .mainBody .containerRight .contentAddress .contentDetail .item .button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: .5vw;
+    height: 5vw;
+}
+
+.main .mainBody .containerRight .contentAddress .contentDetail .item .button h3 {
+    font-size: 1vw;
+    cursor: pointer;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    transition: all linear .1s;
+    background-color: #3d3d3d;
+    padding: 1px 5px;
+    font-weight: 200;
+}
+
+.main .mainBody .containerRight .contentAddress .contentDetail .item .button h3:hover {
+    background-color: #ffffff;
+    color: #000;
+}

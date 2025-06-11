@@ -1,0 +1,183 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Manrope", sans-serif;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    color: #fff;
+    position: relative;
+}
+
+
+.main {
+    position: absolute;
+    cursor: none;
+    background-color: #000000;
+    width: 100%;
+    height: auto;
+}
+
+.main .contentSearch {
+    position: relative;
+    width: 100%;
+    height: 15vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main .contentSearch .filter {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    background-color: rgba(0, 0, 0, 0.555);
+    position: absolute;
+    z-index: 1;
+}
+
+.main .contentSearch img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.main .contentSearch .inputSearch {
+    width: 60%;
+    height: 20%;
+    background-color: #ffffffa6;
+    position: absolute;
+    z-index: 2;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.main .contentSearch .inputSearch input {
+    width: 95%;
+    height: 100%;
+    border: none;
+    background-color: transparent;
+    padding: 0 10px;
+    font-size: 18px;
+}
+
+.main .contentSearch .inputSearch input:focus {
+    outline: none;
+}
+
+.main .contentSearch .inputSearch i {
+    cursor: pointer;
+    font-size: 20px;
+    transition: all ease 0.3s;
+    width: 5%;
+    height: 100%;
+}
+
+.main .contentSearch .inputSearch i:hover {
+    color: #000000;
+}
+
+.page1 {
+    min-height: 100vh;
+    width: 100%;
+    position: relative;
+    z-index: 9;
+    padding-top: 12vw;
+    height: auto;
+    padding-bottom: 15vw;
+    display: flex;
+    justify-content: center;
+    transition: all ease 0.5s;
+    background-color: #0F0D0D;
+}
+
+
+.boxItem {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 40px;
+    flex-wrap: wrap;
+    width: 1360px;
+}
+
+.boxItem .item {
+    width: 300px;
+    height: 470px;
+    background-color: #fff;
+}
+
+.boxItem .item:hover .itemInfo i {
+    transform: translateX(0);
+}
+
+.boxItem .item .itemImg {
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+    position: relative;
+}
+
+.boxItem .item .itemImg img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all ease 0.5s;
+}
+
+.boxItem .item .itemImg .itemImg2 {
+    opacity: 0;
+}
+
+.boxItem .item:hover .itemImg .itemImg2 {
+    opacity: 1;
+}
+
+.boxItem .item .itemInfo {
+    height: 70px;
+    padding: 0 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    background-color: #ffffff;
+    color: #000;
+    overflow: hidden;
+}
+
+.boxItem .item .itemInfo i {
+    font-size: 25px;
+    transform: translateX(-100px);
+    transition: all ease 0.5s;
+}
+
+.boxItem .item .itemInfo .text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.boxItem .item .itemInfo .text h3:nth-child(2) {
+    font-size: 17px;
+    font-weight: 500;
+    color: #595959;
+}
+
+.boxItem .item .itemInfo h4 {
+    font-size: 17px;
+    font-weight: 500;
+}
+
+.boxItem .item .itemInfo h4 i {
+    font-size: 15px;
+    color: rgb(255, 204, 0);
+}

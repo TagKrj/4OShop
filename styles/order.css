@@ -1,0 +1,327 @@
+.contentOrder {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.contentOrder .menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.contentOrder .menu h1 {
+    border-bottom: 1px solid rgb(255, 255, 255);
+    font-size: 1.2vw;
+    padding: 5px;
+    font-weight: 300;
+    width: 10vw;
+    text-align: center;
+    cursor: pointer;
+}
+
+.contentOrder .content {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    min-height: 100vh;
+    margin-top: 2vw;
+    align-items: center;
+}
+
+.contentOrder .content .boxItem {
+    /* background-color: rgb(115, 117, 9); */
+    border: .2px solid rgba(255, 255, 255, 0.301);
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.contentOrder .content .boxItem i {
+    font-size: 1.2vw;
+    position: relative;
+    width: fit-content;
+    cursor: pointer;
+    transition: all linear .2s;
+}
+
+.contentOrder .content .boxItem i:hover {
+    color: #EDBFFF;
+    transform: scale(1.05) rotate(180deg);
+}
+
+.contentOrder .content .boxItem .time {
+    background-color: rgba(255, 255, 255, 0.479);
+    width: fit-content;
+    padding: 5px 10px;
+    border-radius: 2px;
+    position: relative;
+    margin-left: 2vw;
+    margin-top: -1.7vw;
+    opacity: 0;
+    transition: all linear .2s;
+}
+
+.contentOrder .content .boxItem i:hover+.time {
+    opacity: 1;
+}
+
+.contentOrder .content .boxItem .time h4 {
+    font-weight: 400;
+}
+
+.contentOrder .content .boxItem .line {
+    margin-top: 5px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: .5vw 1vw;
+}
+
+.contentOrder .content .boxItem .line .item {
+    display: flex;
+    flex-direction: row;
+    height: 5vw;
+    border-bottom: .2px solid rgba(248, 175, 255, 0.253);
+    border-radius: 5px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.contentOrder .content .boxItem .line .item .boxImg {
+    width: 5vw;
+    height: 5vw;
+    overflow: hidden;
+}
+
+.contentOrder .content .boxItem .line .item .boxImg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.contentOrder .content .boxItem .line .item .info {
+    width: 80%;
+    padding-left: 20px;
+}
+
+.contentOrder .content .boxItem .line .item .info h3 {
+    font-size: 1.2vw;
+    font-weight: 600;
+
+}
+
+.contentOrder .content .boxItem .line .item .price {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 10vw;
+    gap: 10px;
+}
+
+.contentOrder .content .boxItem .line .item .price button {
+    background-color: #EDBFFF;
+    border: none;
+    padding: 5px 5px;
+    border-radius: 5px;
+    color: #000;
+    transition: all linear .1s;
+    cursor: pointer;
+}
+
+.contentOrder .content .boxItem .line .item .price button:hover {
+    transform: scale(1.1);
+    background-color: #e092ff;
+}
+
+.contentOrder .content .boxItem .allInfo {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 1vw;
+    height: 2vw;
+    position: relative;
+}
+
+.contentOrder .content .boxItem .allInfo h3 {
+    font-size: 1.1vw;
+    font-weight: 400;
+    position: relative;
+    width: fit-content;
+    position: absolute;
+    right: 0;
+}
+
+.contentOrder .content .boxItem .allInfo h3 span {
+    font-size: 1.5vw;
+    font-weight: 600;
+}
+
+/* đánh giá */
+
+.ratting {
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.699);
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.ratting .container {
+    width: 50vw;
+    height: 30vw;
+    /* background-color: #EDBFFF; */
+    background-image: url(https://wallpapercave.com/wp/wp2885719.jpg);
+    background-size: cover;
+    background-position: center;
+    padding: 2vw 3vw;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+}
+
+
+.ratting .container i {
+    position: absolute;
+    font-size: 25px;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    color: rgb(65, 65, 65);
+    transition: all 0.1s ease;
+}
+
+.ratting .container i:hover {
+    color: #EDBFFF;
+    transform: scale(1.1) rotate(90deg);
+}
+
+
+.ratting .container .star-widget input {
+    display: none;
+}
+
+.star-widget label {
+    font-size: 40px;
+    color: #000000;
+    padding: 10px;
+    float: right;
+    transition: all 0.2s ease;
+}
+
+.star-widget input:not(:checked)~label:hover,
+.star-widget input:not(:checked)~label:hover~label {
+    color: #EDBFFF;
+    cursor: pointer;
+}
+
+.star-widget input:checked~label {
+    color: #EDBFFF;
+}
+
+.star-widget #rate-5:checked~label {
+    color: #2bb900;
+}
+
+.star-widget #rate-4:checked~label {
+    color: #82e600;
+}
+
+.star-widget #rate-3:checked~label {
+    color: #ffd000;
+}
+
+.star-widget #rate-2:checked~label {
+    color: #ff8800;
+}
+
+.star-widget #rate-1:checked~label {
+    color: #e20000;
+}
+
+#rate-1:checked~form header:before {
+    content: "Bạn không thích ạ? 😭";
+}
+
+#rate-2:checked~form header:before {
+    content: "Không thít ạ? 😞";
+}
+
+#rate-3:checked~form header:before {
+    content: "Bình thường thôi ạ 😐";
+}
+
+#rate-4:checked~form header:before {
+    content: "Hehe khá ổn ạ 😊";
+}
+
+#rate-5:checked~form header:before {
+    content: "Tuyệt vời ạ! 😍";
+}
+
+form header {
+    width: 100%;
+    font-size: 25px;
+    color: #111111;
+    font-weight: 400;
+    margin: 5px 0 20px 0;
+    text-align: center;
+    transition: all 0.2s ease;
+}
+
+form .textarea {
+    height: 100px;
+    width: 100%;
+    overflow: hidden;
+}
+
+form .textarea textarea {
+    height: 100%;
+    width: 100%;
+    outline: none;
+    background: #000000;
+    color: #EDBFFF;
+    padding: 10px;
+    font-size: 17px;
+    resize: none;
+}
+
+form .btn {
+    height: 45px;
+    width: 100%;
+    margin: 15px 0;
+}
+
+form .btn button {
+    height: 100%;
+    width: 100%;
+    border: none;
+    background: #EDBFFF;
+    text-transform: uppercase;
+    color: #000000;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.158);
+    font-size: 20px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+form .btn button:hover {
+    background: #ebb9ff;
+    transform: scale(1.1);
+}

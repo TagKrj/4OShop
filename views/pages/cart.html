@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giỏ hàng</title>
+    <!-- css -->
+    <link rel="stylesheet" href="/styles/cart.css">
+    <link rel="stylesheet" href="/styles/header.css">
+    <!-- scroll -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css">
+    <!-- font chữ -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Concert+One&family=Lilita+One&family=Manrope:wght@200..800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <!--bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+
+<body>
+    <div class="address">
+        <div class="addressBox">
+            <i class="bi bi-x-circle" id="close"></i>
+            <div class="addressContent">
+                <!-- <div class="item">
+                    <i class=" bi bi-geo-alt"></i>
+                    <div class="info">
+                        <h3>Địa chỉ: <span> Hạ Long</span></h3>
+                        <h3>Địa điểm: <span>Nhà </span></h3>
+                        <h3>SĐT: <span>3456789</span></h3>
+                    </div>
+                    <div class="button">
+                        <h3 class="default">
+                            Mặc định
+                        </h3>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+    </div>
+    <div id="nav">
+        <a href="#">
+            <h1 title="Trang chủ"><i class="bi bi-house-door"></i><span>4O </span></h1>
+        </a>
+        <!-- <div id="nav-part2">
+            <a href="#page1">
+                <h4>Quần</h4>
+            </a>
+            <h4>Áo phông</h4>
+            <h4>Giày thể thao</h4>
+            <h4>Váy</h4>
+            <h4>Áo khoác</h4>
+            <h4>Mũ</h4>
+        </div> -->
+        <div id="nav-part3">
+            <div id="user-notification">
+                <i class="bi bi-bell-fill" title="Thông báo"></i>
+                <i class="bi bi-person-circle" id="authIcon" title="Tài khoản"></i>
+            </div>
+        </div>
+    </div>
+
+    <div class="main">
+        <h1>Giỏ hàng của bạn</h1>
+        <div class="container">
+            <div class="contentLeft">
+                <div class="cart">
+
+                    <!-- <div class="cartItem">
+                        <div class="cartItemImg">
+                            <img src="https://vn.louisvuitton.com/images/is/image/lv/1/PP_VP_M/louis-vuitton--HRN42WZ34002_PM2_Front%20view.jpg?wid=750&hei=870"
+                                alt="">
+                        </div>
+                        <div class="cartItemInfo">
+                            <h2>Giày thể thao</h2>
+                            <h3>Size: M | Màu sắc: Đỏ</h3>
+                            <h4>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Recusandae voluptatum, atque dolores
+                                ullam, obcaecati veniam, pariatur delectus corporis natus consequuntur deserunt praesentium?
+                                Fugit temporibus quo quae corporis, quos quaerat a.
+                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quis dignissimos quas explicabo
+                                assumenda vero nesciunt at saepe, dolores repellendus quia sequi quae, quisquam deserunt,
+                                officiis dolore ullam hic suscipit sunt.</h4>
+                        </div>
+                        <div class="cartItemPrice">
+                            <div class="number">
+                                <button class="minus">-</button>
+                                <input type="number" id="numberInput" value="1" min="0" max="100" step="1" />
+                                <button class="plus">+</button>
+                            </div>
+                            <h3>87.98</h3>
+                        </div>
+                        <div class="cartItemDelete">
+                            <i class="bi bi-trash3"></i>
+                        </div>
+                    </div> -->
+
+                </div>
+                <div class="footerPrice">
+                    <div class="content">
+                        <h3>Tổng tiền: <span id="total">0</span></h3>
+                        <h5>(+10.0đ phí giao hàng)</h5>
+                    </div>
+                    <button id="addressButton">địa chỉ</button>
+                </div>
+            </div>
+
+            <div class="contentRight">
+                <h1>Thanh toán</h1>
+                <div class="boxCart">
+                    <div class="boxItem1">
+
+                    </div>
+                    <div class="boxItem2">
+                        <h5 id="displayCardNumber">.... .... .... ....</h5>
+                    </div>
+                    <div class="boxItem3">
+                        <div class="cardHolder">
+                            <h5>Chủ thẻ</h5>
+                            <h5 id="displayCardHolder">Nhập tên chủ thẻ</h5>
+                        </div>
+                        <div class="cardDate">
+                            <h5>Hết hạn</h5>
+                            <h5 id="displayCardDate">MM/YY</h5>
+                        </div>
+                    </div>
+
+                </div>
+                <input type="text" id="cardHolderInput" placeholder="Tên chủ thẻ" required>
+                <input type="text" id="cardNumberInput" placeholder="Số thẻ" required>
+                <div class="date">
+                    <input type="text" id="cardDateInput" placeholder="Ngày hết hạn" required>
+                    <input type="password" id="cvv" placeholder="CVV" required>
+                </div>
+                <button id="paymentButton">Thanh toán</button>
+            </div>
+        </div>
+
+    </div>
+
+    <!------------------- SCRIPT------------------->
+
+    <!-- Scroll -->
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"
+        integrity="sha512-16esztaSRplJROstbIIdwX3N97V1+pZvV33ABoG1H2OyTttBxEGkTsoIVsiP1iaTtM8b3+hu2kB6pQ4Clr5yug=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"
+        integrity="sha512-Ic9xkERjyZ1xgJ5svx3y0u3xrvfT/uPkV99LBwe68xjy/mGtO+4eURHZBW2xW4SZbFrF1Tf090XqB+EVgXnVjw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <!-- Chung -->
+    <script src="/app.js"></script>
+    <!-- Cart -->
+    <script src="/scripts/cart.js"></script>
+
+    <!-- cartView -->
+    <script type="module" src="/views/widgets/cartView.js"></script>
+
+    <!-- address cart -->
+    <script type="module" src="/views/widgets/addressCartView.js"></script>
+
+
+</body>
+
+</html>

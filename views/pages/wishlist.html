@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yêu thích</title>
+    <!-- css -->
+    <link rel="stylesheet" href="/styles/wishlist.css">
+    <link rel="stylesheet" href="/styles/cursor.css">
+    <link rel="stylesheet" href="/styles/header.css">
+    <!-- scroll -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css">
+    <!-- font chữ -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Concert+One&family=Lilita+One&family=Manrope:wght@200..800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <!--bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+
+
+<body>
+    <div class="cursor"></div>
+    <div id="nav">
+        <a href="#">
+            <h1 title="Trang chủ"><i class="bi bi-house-door"></i><span>4O </span></h1>
+        </a>
+        <!-- <div id="nav-part2">
+            <a href="#page1">
+                <h4>Quần</h4>
+            </a>
+            <h4>Áo phông</h4>
+            <h4>Giày thể thao</h4>
+            <h4>Váy</h4>
+            <h4>Áo khoác</h4>
+            <h4>Mũ</h4>
+        </div> -->
+        <div id="nav-part3">
+            <div id="user-notification">
+                <i class="bi bi-bell-fill" title="Thông báo"></i>
+                <i class="bi bi-person-circle" id="authIcon" title="Tài khoản"></i>
+            </div>
+        </div>
+    </div>
+
+    <div class="main">
+        <h1>Sản phẩm yêu thích</h1>
+        <div id="page1" class="page1">
+            <div class="boxItem">
+                <!-- <div class="item" data-id="${product.id}">
+                    <div class="itemImg">
+                        <img class="itemImg1" src="https://bdsneaker.vn/uploads/source/luxury/ao-lv/tee-lv-black-.png"
+                            alt="">
+                        <img class="itemImg2"
+                            src="https://bdsneaker.vn/uploads/source/ao/ao-phong-louis-vuitton-damier-white-chuan-authentic-1.webp"
+                            alt="">
+                    </div>
+                    <div class="itemInfo">
+                        <i class="bi bi-suit-heart"></i>
+                        <div class="text">
+                            <h3>Áo phông Louis</h3>
+                            <h3>78.09</h3>
+                        </div>
+                        <h4>4 <i class="bi bi-star-fill"></i></h4>
+                    </div>
+                </div> -->
+
+            </div>
+        </div>
+
+    </div>
+
+    <!------------------- SCRIPT------------------->
+
+    <!-- Scroll -->
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"
+        integrity="sha512-16esztaSRplJROstbIIdwX3N97V1+pZvV33ABoG1H2OyTttBxEGkTsoIVsiP1iaTtM8b3+hu2kB6pQ4Clr5yug=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"
+        integrity="sha512-Ic9xkERjyZ1xgJ5svx3y0u3xrvfT/uPkV99LBwe68xjy/mGtO+4eURHZBW2xW4SZbFrF1Tf090XqB+EVgXnVjw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <!-- Chung -->
+    <script src="/app.js"></script>
+    <!-- Wishlist -->
+    <script src="/scripts/wishlist.js"></script>
+
+    <!-- cartView -->
+    <script type="module" src="/views/widgets/wishlistView.js"></script>
+
+</body>
+
+</html>

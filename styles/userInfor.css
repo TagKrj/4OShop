@@ -1,0 +1,125 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Manrope", sans-serif;
+    color: #fff;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+.main {
+    background-color: #0F0D0D;
+    cursor: none;
+    height: 100vh;
+    position: relative;
+}
+
+.main .mainBody {
+    /* background-color: blueviolet; */
+    margin-top: 5vw;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.main .mainBody .containerLeft {
+    width: 20%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient(to top, #4e4e4e5e, #6d6d6d1f, #7c7c7c0e, #7c7c7c00);
+    padding: 2vw 0px 2vw 0px;
+}
+
+.main .mainBody .containerLeft .userInfor {
+    width: 12vw;
+    height: 12vw;
+    border-radius: 50%;
+    border: .5px solid #ffffff80;
+    background-color: rgba(255, 255, 255, 0.068);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.main .mainBody .containerLeft .userInfor i {
+    font-size: 4vw;
+    margin-top: 1vw;
+    color: #EDBFFF;
+}
+
+.main .mainBody .containerLeft .userInfor h2 {
+    font-size: 1.5vw;
+    font-weight: 100;
+}
+
+.main .mainBody .containerLeft .menu {
+    display: flex;
+    flex-direction: column;
+    margin-top: 4vw;
+    gap: 1vw;
+}
+
+.main .mainBody .containerLeft .menu h3 {
+    font-size: 1.2vw;
+    font-weight: 400;
+    cursor: pointer;
+    transition: all linear .1s;
+    text-transform: uppercase;
+    transition: all linear .1s;
+}
+
+.main .mainBody .containerLeft .menu h3 i {
+    margin-right: 1vw;
+    font-size: 1.5vw;
+}
+
+.main .mainBody .containerLeft .menu h3:hover {
+    color: #EDBFFF;
+    font-weight: 800;
+}
+
+.main .mainBody .containerLeft .menu h3#logout {
+    background-color: #edbfff21;
+    padding: 2px 5px;
+    border-radius: 5px;
+}
+
+.main .mainBody .containerLeft .menu h3#logout:hover {
+    background-color: #ffffff;
+    color: #0F0D0D;
+    font-weight: 400;
+}
+
+.main .mainBody .containerRight {
+    width: 79.5%;
+    height: 100vh;
+    padding: 2vw;
+    padding-bottom: 10vw;
+    scroll-behavior: smooth;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.main .mainBody .containerRight::-webkit-scrollbar {
+    width: 10px;
+    cursor: pointer;
+}
+
+.main .mainBody .containerRight::-webkit-scrollbar-thumb {
+    background: #ffffff3e;
+    border-radius: 4px;
+}
+
+.main .mainBody .containerRight::-webkit-scrollbar-thumb:hover {
+    background: #747474a9;
+}

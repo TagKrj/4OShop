@@ -1,0 +1,74 @@
+footer {
+    height: 90vh;
+    width: 100%;
+    background-color: rgb(250, 248, 242);
+    display: flex;
+    flex-direction: row;
+}
+
+.contentLeft {
+    width: 70%;
+    /* background-color: blueviolet; */
+    padding: 5vw 0 0 5vw;
+}
+
+.contentLeft h1 {
+    color: #141414;
+    font-size: 4vw;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.contentLeft h4 {
+    margin-top: 7vw;
+    font-size: 1.5vw;
+    font-weight: 200;
+    color: #0f0f0f;
+    letter-spacing: 2px;
+}
+
+.contentRight {
+    width: 30%;
+    padding: 5vw 0 0 5vw;
+}
+
+.contentRight h2 {
+    color: #0f0f0f;
+    background-color: rgb(255, 255, 255);
+    font-weight: 400;
+    letter-spacing: 2px;
+}
+
+.contentRight .address {
+    display: flex;
+    flex-direction: row;
+    margin-top: 50px;
+}
+
+.contentRight .address .address1 {
+    margin-right: 20px;
+}
+
+.contentRight .address .address1 h3 {
+    color: #0f0f0f;
+    margin-bottom: 10px;
+}
+
+.contentRight .address .address1 h4 {
+    color: #0f0f0f;
+    font-size: 20px;
+    font-weight: 300;
+}
+
+.contentRight .address .address2 h3 {
+    color: #0f0f0f;
+    margin-bottom: 10px;
+}
+
+.contentRight .address .address2 h4 i {
+    color: #0f0f0f;
+    font-size: 20px;
+    font-weight: 300;
+    cursor: pointer;
+}

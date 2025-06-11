@@ -1,0 +1,377 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Manrope", sans-serif;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    color: #fff;
+}
+
+
+.main {
+    position: relative;
+    cursor: none;
+    background-color: #000000;
+}
+
+.main .addCart {
+    width: 100px;
+    height: 100px;
+    background-color: #fff;
+    position: absolute;
+    top: 100px;
+    left: 750px;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color ease 0.4s, transform ease 0.2s;
+}
+
+.main .addCart:hover {
+    transform: scale(1.05);
+    background: linear-gradient(45deg, rgba(233, 134, 241, 0.7), rgb(235, 181, 252));
+}
+
+.main .addCart i {
+    font-size: 25px;
+    color: #000;
+}
+
+.main .productDetail {
+    height: 100vh;
+    width: 100%;
+    /* background-color: #000000; */
+    display: flex;
+    flex-direction: row;
+    padding: 55px 55px 0 55px;
+}
+
+.main .productDetail .productDetailLeft {
+    width: 60%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+    padding: 40px;
+}
+
+.main .productDetail .productDetailLeft .content {
+    position: absolute;
+    top: 8%;
+    color: #EDBFFF;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5vw;
+}
+
+.main .productDetail .productDetailLeft .content h1 {
+    font-size: 60px;
+    font-weight: 400;
+    color: aliceblue;
+}
+
+.main .productDetail .productDetailLeft .content h4 {
+    color: #fff;
+    font-style: italic;
+}
+
+.main .productDetail .productDetailLeft .content h2 {
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.main .productDetail .productDetailLeft .content h3 {
+    font-size: 16px;
+    font-weight: 400;
+    max-width: 50vw;
+    height: 5vw;
+    padding: 10px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    z-index: 2;
+    transition: all linear .2s;
+    border-radius: 10px;
+
+}
+
+.main .productDetail .productDetailLeft .content h3:hover {
+    overflow: visible;
+    transform: translateY(-10px) translateX(10px) scale(1.05);
+    height: 12vw;
+    background-color: #9393936f;
+    transition: all linear .2s;
+}
+
+.main .productDetail .productDetailLeft .select {
+    position: absolute;
+    top: 23vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    min-width: 30vw;
+    gap: 10vw;
+}
+
+.main .productDetail .productDetailLeft .select .size {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.main .productDetail .productDetailLeft .select .size h3 {
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.main .productDetail .productDetailLeft .select .size .sizeList {
+    display: flex;
+    flex-direction: row;
+    gap: 2vw;
+}
+
+.main .productDetail .productDetailLeft .select .size .sizeList h4 {
+    border-radius: 50%;
+    border: 1px solid #fff;
+    width: 2vw;
+    height: 2vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all linear .1s;
+    color: #868686;
+
+}
+
+.main .productDetail .productDetailLeft .select .size .sizeList h4:hover {
+    transform: scale(1.3) rotate(45deg);
+    border: 2px solid #fff;
+}
+
+.main .productDetail .productDetailLeft .select .color {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    cursor: pointer;
+}
+
+.main .productDetail .productDetailLeft .select .color h3 {
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.main .productDetail .productDetailLeft .select .color .colorList {
+    display: flex;
+    flex-direction: row;
+    gap: 2vw;
+}
+
+.main .productDetail .productDetailLeft .select .color .colorList h4 {
+    width: 2vw;
+    height: 2vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all linear .1s;
+    color: #868686;
+}
+
+.main .productDetail .productDetailLeft .select .color .colorList h4:hover {
+    transform: scale(1.3);
+    color: #EDBFFF;
+}
+
+.main .productDetail .productDetailLeft .contentImg {
+    position: absolute;
+    top: 30vw;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 2vw;
+    width: 47vw;
+    white-space: nowrap;
+    overflow-x: auto;
+    flex-shrink: 0;
+    overflow-y: hidden;
+    scroll-behavior: smooth;
+    padding: 5px;
+}
+
+.main .productDetail .productDetailLeft .contentImg::-webkit-scrollbar {
+    height: 10px;
+}
+
+.main .productDetail .productDetailLeft .contentImg::-webkit-scrollbar-thumb {
+    background: #e6e6e696;
+    border-radius: 10px;
+}
+
+.main .productDetail .productDetailLeft .contentImg::-webkit-scrollbar-thumb:hover {
+    background: #EDBFFF;
+}
+
+.main .productDetail .productDetailLeft .contentImg img {
+    width: 15vw;
+    height: 17vw;
+    object-fit: cover;
+    background-color: rgb(255, 255, 255);
+    transition: transform ease 0.5s;
+    cursor: pointer;
+}
+
+.main .productDetail .productDetailLeft .contentImg img:hover {
+    transform: scale(1.05);
+}
+
+.main .productDetail .productDetailRight {
+    width: 40%;
+    height: 100%;
+    /* background-color: #000000; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main .productDetail .productDetailRight img {
+    width: 39vw;
+    height: 45vw;
+    transition: all linear .5s;
+}
+
+/* chỉnh ảnh chính */
+.image-transition {
+    opacity: 0.2;
+}
+
+.main .productSimilar {
+    height: 100vh;
+    width: 100%;
+    position: relative;
+}
+
+.main .productSimilar h1 {
+    font-size: 60px;
+    font-weight: 500;
+    margin-top: 50px;
+    margin-left: 50px;
+    position: absolute;
+    text-transform: uppercase;
+    color: #000;
+}
+
+.main .productSimilar .productSimilarList {
+    position: absolute;
+    top: 200px;
+    display: flex;
+    flex-direction: row;
+    gap: 2vw;
+    padding: 20px 55px;
+    width: 100%;
+    overflow: hidden;
+    scroll-behavior: smooth;
+    overflow-x: auto;
+}
+
+.productSimilarList::-webkit-scrollbar {
+    height: 6px;
+}
+
+.productSimilarList::-webkit-scrollbar-thumb {
+    background: #00000089;
+    border-radius: 4px;
+}
+
+.productSimilarList::-webkit-scrollbar-thumb:hover {
+    background: #000000;
+}
+
+
+.main .productSimilar .productSimilarList .item {
+    flex: 0 0 auto;
+    width: 400px;
+    height: 570px;
+    background-color: #fff;
+    border: 1px solid #c8c8c8;
+}
+
+.main .productSimilar .productSimilarList .item:hover .itemInfo i {
+    transform: translateX(0);
+}
+
+.main .productSimilar .productSimilarList .item .itemImg {
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+    position: relative;
+}
+
+.main .productSimilar .productSimilarList .item .itemImg img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all ease 0.5s;
+    background-color: #fff;
+}
+
+.main .productSimilar .productSimilarList .item .itemImg .itemImg2 {
+    opacity: 0;
+}
+
+.main .productSimilar .productSimilarList .item:hover .itemImg .itemImg2 {
+    opacity: 1;
+}
+
+.main .productSimilar .productSimilarList .item .itemInfo {
+    height: 70px;
+    padding: 0 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    color: #000;
+    overflow: hidden;
+}
+
+.main .productSimilar .productSimilarList .item .itemInfo i {
+    font-size: 25px;
+    transform: translateX(-100px);
+    transition: all ease 0.5s;
+}
+
+.main .productSimilar .productSimilarList .item .itemInfo .text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.main .productSimilar .productSimilarList .item .itemInfo .text h3:nth-child(2) {
+    font-size: 17px;
+    font-weight: 500;
+    color: #595959;
+}
+
+.main .productSimilar .productSimilarList .item .itemInfo h4 {
+    font-size: 17px;
+    font-weight: 500;
+}
+
+.main .productSimilar .productSimilarList .item .itemInfo h4 i {
+    font-size: 15px;
+    color: rgb(255, 204, 0);
+}

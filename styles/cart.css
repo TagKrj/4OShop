@@ -1,0 +1,467 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Manrope", sans-serif;
+    color: #fff;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+
+.main {
+    background-color: #0F0D0D;
+    height: 100vh;
+}
+
+.main h1 {
+    text-align: center;
+    font-size: 30px;
+    padding: 10px 0;
+    text-transform: uppercase;
+    font-weight: 400;
+}
+
+.main .container {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+}
+
+.main .container .contentLeft {
+    width: 55%;
+}
+
+.main .cart {
+    height: 83%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 0 0 0;
+    overflow-y: auto;
+    scroll-behavior: smooth;
+}
+
+.main .cart::-webkit-scrollbar {
+    width: 6px;
+}
+
+.main .cart::-webkit-scrollbar-thumb {
+    background: #7e7e7e89;
+    border-radius: 4px;
+}
+
+.main .cart::-webkit-scrollbar-thumb:hover {
+    background: #eaeaebce;
+}
+
+.main .cart .cartItem {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    /* background-color: #ffffffaa; */
+    border: .2px solid #ffffff44;
+    border-radius: 15px 15px 15px 15px;
+    width: 50vw;
+    height: 125px;
+    overflow: hidden;
+    margin-bottom: 10px;
+    flex-shrink: 0;
+    cursor: pointer;
+    transition: .2s ease-in-out;
+    box-shadow: 0px 4px 6px rgba(51, 51, 51, 0.281);
+}
+
+.main .cart .cartItem:hover {
+    transform: translateY(-10px) scale(1.05);
+    transition: .2s ease-in-out;
+    box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.6),
+        /* Bóng lớn hơn */
+        0px 0px 30px rgba(218, 139, 255, 0.452);
+}
+
+.main .cart .cartItem .cartItemImg {
+    width: 150px;
+    height: 125px;
+
+}
+
+.main .cart .cartItem .cartItemImg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+
+.main .cart .cartItem .cartItemInfo {
+    margin-left: 20px;
+    width: 25vw;
+    height: 14vh;
+}
+
+.main .cart .cartItem .cartItemInfo h2 {
+    font-size: 20px;
+    font-weight: 300;
+}
+
+.main .cart .cartItem .cartItemInfo h3 {
+    font-size: 15px;
+    color: #bbbbbb;
+    font-weight: 600;
+    margin-top: 10px;
+}
+
+.main .cart .cartItem .cartItemInfo h4 {
+    font-size: 15px;
+    color: #8a8a8a;
+    font-weight: 600;
+    margin-top: 10px;
+    display: -webkit-box;
+    /* Bật chế độ flexbox cho các dòng */
+    -webkit-box-orient: vertical;
+    /* Hướng dọc cho flexbox */
+    overflow: hidden;
+    /* Ẩn nội dung thừa */
+    text-overflow: ellipsis;
+    /* Thêm dấu "..." */
+    -webkit-line-clamp: 2;
+}
+
+
+.main .cart .cartItem .cartItemPrice {
+    margin-top: 20px;
+    margin-left: 20px;
+    width: 8vw;
+    height: 7vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.main .cart .cartItem .cartItemPrice .number {
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 5px;
+    width: 100px;
+}
+
+.main .cart .cartItem .cartItemPrice .number .minus,
+.plus,
+input {
+    width: 35px;
+    color: black;
+    border: none;
+    cursor: pointer;
+}
+
+.main .cart .cartItem .cartItemPrice .number .minus,
+.plus {
+    width: 20px;
+    color: black;
+    border: none;
+    background-color: rgba(255, 255, 255, 0);
+}
+
+
+.main .cart .cartItem .cartItemDelete {
+    margin-left: 25px;
+}
+
+.main .cart .cartItem .cartItemDelete i {
+    font-size: 20px;
+}
+
+.main .cart .cartItem .cartItemDelete i:hover {
+    color: #EDBFFF;
+}
+
+/* Giá  */
+.main .footerPrice {
+    height: 10%;
+    background-color: #EDBFFF;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.main .footerPrice .content {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    right: 15vw;
+}
+
+.main .footerPrice h3 {
+    font-size: 20px;
+    color: #000000;
+}
+
+.main .footerPrice h5 {
+    font-size: 15px;
+    color: #000000;
+    font-weight: 500;
+    font-style: italic;
+}
+
+.main .footerPrice button {
+    position: absolute;
+    right: 2vw;
+    font-size: 20px;
+    background-color: #000000;
+    padding: 10px 20px;
+    cursor: pointer;
+    text-transform: uppercase;
+    border: none;
+    transition: linear 0.1s;
+}
+
+.main .footerPrice button:hover {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+
+/* Địa chỉ */
+.address {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #00000094;
+    z-index: 1;
+    align-items: center;
+    justify-content: center;
+    display: none;
+    transition: all ease 0.2s;
+}
+
+.address .addressBox {
+    width: 50%;
+    height: 50%;
+    background-color: #fffffff8;
+    position: relative;
+    border-radius: 5px;
+    box-shadow: 0 2px 15px rgba(255, 255, 255, 0.301);
+    overflow: hidden;
+}
+
+
+.address .addressBox .bi-x-circle {
+    font-size: 1.8vw;
+    position: absolute;
+    right: 10px;
+    color: #000000;
+    cursor: pointer;
+    transition: linear 0.1s;
+}
+
+.address .addressBox .bi-x-circle:hover {
+    transform: scale(1.2) rotate(90deg);
+}
+
+.address .addressBox .addressContent {
+    position: absolute;
+    margin-top: 35px;
+    width: 100%;
+    height: 92%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+    overflow-y: auto;
+}
+
+.address .addressBox .addressContent::-webkit-scrollbar {
+    width: 6px;
+}
+
+.address .addressBox .addressContent::-webkit-scrollbar-thumb {
+    background: #9b9b9bc7;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.address .addressBox .addressContent .item {
+    width: 40vw;
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+    border-bottom: 1px solid #00000093;
+    /* box-shadow: 0 1px 5px rgba(3, 3, 3, 0.301); */
+    border-radius: 5px;
+    transition: linear 0.1s;
+}
+
+.address .addressBox .addressContent .item:hover {
+    transform: translateX(5px);
+    box-shadow: 0 1px 5px rgba(3, 3, 3, 0.301);
+    background-color: #0f0d0d2f;
+}
+
+.address .addressBox .addressContent .item i {
+    width: 5vw;
+    border-radius: 50%;
+    border: .2px solid #8a8a8a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3vw;
+    color: #00000079;
+}
+
+.address .addressBox .addressContent .item .info {
+    width: 27vw;
+    padding: 0 10px;
+    margin-left: 10px;
+}
+
+.address .addressBox .addressContent .item .info h3 {
+    font-weight: 300;
+    color: #000000;
+    font-size: 1.1vw;
+
+}
+
+.address .addressBox .addressContent .item .info span {
+    font-weight: 600;
+    color: #000000;
+    font-size: 1.1vw;
+}
+
+
+.address .addressBox .addressContent .item .button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.address .addressBox .addressContent .item .button h3 {
+    background-color: #000;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 400;
+    font-size: 1vw;
+    padding: 1px 5px;
+    box-shadow: 0 2px 5px rgba(3, 3, 3, 0.425);
+}
+
+.address .addressBox .addressContent .item .button h3:hover {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+/* Thanh toán */
+.main .container .contentRight {
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.main .container .contentRight h1 {
+    text-align: center;
+    font-size: 25px;
+    padding: 10px 0;
+    text-transform: uppercase;
+    font-weight: 400;
+    border-bottom: #edbfffbe solid .05px;
+    width: 100%;
+}
+
+.main .container .contentRight .boxCart {
+    background: linear-gradient(45deg, #4224c5, #4224c5, #860ed6, #cd76ff);
+    transition: opacity 0.3s ease;
+    /* Hiệu ứng mượt */
+    margin-top: 4vw;
+    width: 25vw;
+    height: 14vw;
+    border-radius: 10px;
+    padding: 10px;
+    position: relative;
+    /* Animation */
+    animation: float 1s infinite alternate ease-in-out;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0);
+        /* Vị trí ban đầu */
+    }
+
+    100% {
+        transform: translateY(-10px);
+        /* Dịch chuyển lên 5px */
+    }
+}
+
+.main .container .contentRight .boxCart .boxItem1 {
+    width: 40px;
+    background-color: #fafafa;
+    height: 30px;
+    position: absolute;
+    right: 10px;
+    border-radius: 3px;
+}
+
+.main .container .contentRight .boxCart .boxItem2 {
+    margin-top: 4vw;
+    font-size: 2.5vw;
+    font-weight: 300;
+}
+
+.main .container .contentRight .boxCart .boxItem3 {
+    margin-top: 3vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.main .container .contentRight .boxCart .boxItem3 h5 {
+    font-weight: 600;
+}
+
+
+.main .container .contentRight input {
+    margin-top: 3vw;
+    width: 50%;
+    height: 40px;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.main .container .contentRight .date {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 50%;
+}
+
+.main .container .contentRight .date input {
+    width: 40%;
+    height: 40px;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.main .container .contentRight button {
+    margin-top: 3vw;
+    width: 50%;
+    height: 40px;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #6f51da;
+    border: none;
+    text-transform: uppercase;
+    font-weight: 500;
+    transition: all ease 0.2s;
+}
+
+.main .container .contentRight button:hover {
+    background-color: #f0c8ff;
+    color: #000000;
+}
