@@ -1,12 +1,12 @@
 
-var crsr = document.querySelector(".cursor")
+// var crsr = document.querySelector(".cursor")
 var main = document.querySelector(".main")
 
 //cursor
-document.addEventListener("mousemove", function (dets) {
-    crsr.style.left = dets.x + "px"
-    crsr.style.top = dets.y + "px"
-})
+// document.addEventListener("mousemove", function (dets) {
+//     crsr.style.left = dets.x + "px"
+//     crsr.style.top = dets.y + "px"
+// })
 // logo
 var logo = document.querySelector(".logo");
 logo.addEventListener("click", function () {

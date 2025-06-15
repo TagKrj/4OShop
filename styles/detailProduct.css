@@ -15,7 +15,7 @@ body {
 
 .main {
     position: relative;
-    cursor: none;
+    /* cursor: none; */
     background-color: #000000;
 }
 

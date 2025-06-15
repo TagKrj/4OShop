@@ -40,7 +40,7 @@ function init() {
 
 init()
 
-var crsr = document.querySelector(".cursor")
+// var crsr = document.querySelector(".cursor")
 var main = document.querySelector(".main")
 
 //cursor

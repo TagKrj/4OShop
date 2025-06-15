@@ -14,7 +14,7 @@ body {
 
 .main {
     background-color: #0F0D0D;
-    cursor: none;
+    /* cursor: none; */
     height: 100vh;
     position: relative;
 }

@@ -16,7 +16,7 @@ body {
 
 .main {
     position: absolute;
-    cursor: none;
+    /* cursor: none; */
     background-color: #000000;
     width: 100%;
     height: auto;
